@@ -1,0 +1,28 @@
+group 'DEMORLCarriers'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile ('io.cucumber:cucumber-junit:2.3.0') {
+        exclude module: 'cucumber-html'
+    }
+
+    compile ('io.cucumber:cucumber-java:2.3.0') {
+        exclude module: 'cucumber-html'
+    }
+
+    compile 'info.cukes:cucumber-html:0.2.3'
+    compile 'junit:junit:4.12'
+    compile 'org.seleniumhq.selenium:selenium-java:2.41.0'
+}
+
+
+
